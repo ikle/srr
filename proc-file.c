@@ -6,9 +6,6 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#include <errno.h>
-#include <stdint.h>
-
 #include <srr/msg.h>
 #include <srr/net-vc.h>
 #include <srr/proc-file.h>
