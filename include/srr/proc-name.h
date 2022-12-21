@@ -13,30 +13,29 @@
 #include <stdint.h>
 
 struct proc_name_info {
-	int32_t pid, uid, gid, mode;
-	char name[];
+	int32_t pid;
+	char name[16];
 };
 
 /*
- * The function proc_name_attach creates a name with the specified access
- * rights. Returns the identifier of the name. Requires write access to
- * the proc process.
+ * The function proc_name_attach associates a name with the calling
+ * process. Returns 0 on success.
  *
- * The function proc_name_detach removes the name. Requires write access
- * to the proc process.
+ * The function proc_name_detach removes the name's association with the
+ * calling process. Returns 0 on success.
  *
- * The function proc_name_lookup looks up the name. Returns the pid of the
- * process that owns the name. Requires read access to the proc process.
+ * The function proc_name_lookup looks up the name. Returns the pid of
+ * the process that owns the name.
  *
- * The function proc_name_query queries the name info. Returns information
- * about the name with an identifier equal to the specified one or, if
- * none, with the next identifier. Returns the name identifier. Requires
- * read access to the proc process.
+ * The function proc_name_query queries the name info. Stores information
+ * about up to count names after the specified one and returns the number
+ * of entries saved. To search from the beginning of the list of names,
+ * specify after = NULL.
  */
-int proc_name_attach (int pid, const char *name, int uid, int gid, int mode);
-int proc_name_detach (int pid, int id);
-
-int proc_name_lookup (int pid, const char *name);
-int proc_name_query  (int pid, int id, struct proc_name_info *ni, size_t size);
+int proc_name_attach (int proc, const char *fmt, ...);
+int proc_name_detach (int proc, const char *fmt, ...);
+int proc_name_lookup (int proc, const char *fmt, ...);
+int proc_name_query  (int proc, const char *after,
+		      struct proc_name_info *ni, size_t count);
 
 #endif  /* SRR_PROC_NAME_H */
