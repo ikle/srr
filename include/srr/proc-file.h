@@ -13,8 +13,11 @@ enum proc_file_flag {
 	PROC_FILE_PRIVATE	0x01,	/* do not copy to childs	*/
 };
 
+/*
+ * If the resource is on the local node then nid = 0, vid = pid.
+ */
 struct proc_file_info {
-	int nid, pid, handle;	/* resource location */
+	int nid, pid, vid, handle;	/* resource location		*/
 	int flags;
 };
 
@@ -44,7 +47,7 @@ struct proc_file_info {
  * descriptor fd. If successful, returns the file descriptor of the
  * found file and information about the file resource in the fi.
  */
-int proc_file_attach (int fd, int nid, int pid, int handle, int flags);
+int proc_file_attach (int fd, int nid, int pid, int vid, int handle, int flags);
 int proc_file_detach (int fd);
 int proc_file_query  (int proc, int pid, int fd, struct proc_file_info *fi);
 

@@ -27,7 +27,7 @@
  * command sequence ops must contain a command to change the PID of the
  * process to the PID of the calling process.
  */
-int proc_spawn (int proc, int nid, int pid, int handle,
+int proc_spawn (int proc, int nid, int pid, int vid, int handle,
 		char *const argv[], char *const envp[], const int *ops);
 
 #endif  /* SRR_PROC_SPAWN_H */
