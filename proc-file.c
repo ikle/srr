@@ -22,11 +22,12 @@ int proc_file_attach (int fd, int nid, int pid, int vid, int handle, int flags)
 
 	if (nid == 0) {
 		if (pid == 0) {
-			if ((pid = net_vc_query (vid, &vi)) < 0)
-				return pid;
-
-			nid = vi.nid;
-			pid = vi.pid;
+			if (net_vc_query (vid, &vi) < 0)
+				pid = vid;
+			else {
+				nid = vi.nid;
+				pid = vi.pid;
+			}
 		}
 		else
 			vid = pid;
