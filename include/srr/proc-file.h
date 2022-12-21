@@ -10,7 +10,7 @@
 #define SRR_PROC_FILE_H  1
 
 enum proc_file_flag {
-	PROC_FILE_PRIVATE	0x01,	/* do not copy to childs	*/
+	PROC_FILE_PRIVATE	= 0x01,	/* do not copy to childs	*/
 };
 
 /*
