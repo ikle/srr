@@ -12,7 +12,7 @@
 #include <srr/wire/net.h>
 
 struct net_vc_attach {
-	int32_t code, nid, pid, len, flags;
+	int32_t code, nid, pid, len, flags, pad;
 };
 
 struct net_vc_detach {
