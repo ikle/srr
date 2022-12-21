@@ -29,6 +29,10 @@ struct net_vc_info {
  * The function net_vc_connect looks up a remote process by name and
  * establishes a connection to it. Returns the pid of the gateway
  * process. Requires execute access to the net process.
+ *
+ * The function net_vc_query looks up information about the virtual
+ * process. Returns 0 on success and populates the vi with information
+ * about the virtual process.
  */
 int net_vc_attach  (int nid, int pid, int len, int flags);
 int net_vc_detach  (int pid);
