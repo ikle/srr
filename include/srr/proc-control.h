@@ -20,11 +20,12 @@ enum proc_op {
 	PROC_SCHED	= 1,		/* scheduler algorithm		*/
 	PROC_PRIO	= 2,		/* process priority		*/
 
-	PROC_UID	= 4,		/* process owner		*/
-	PROC_GID	= 5,		/* process group		*/
-	PROC_MODE	= 6,		/* access to process and umask	*/
-	PROC_MLS	= 7,		/* MLS level			*/
-	PROC_MCS	= 8,		/* MCS categories		*/
+	PROC_CAPS	= 4,		/* process capabilities		*/
+	PROC_UID	= 5,		/* process owner		*/
+	PROC_GID	= 6,		/* process group		*/
+	PROC_MODE	= 7,		/* access to process and umask	*/
+	PROC_MLS	= 8,		/* MLS level			*/
+	PROC_MCS	= 9,		/* MCS categories		*/
 
 	PROC_PID	= 10,		/* process identifier		*/
 	PROC_PPID	= 11,		/* parent process		*/
