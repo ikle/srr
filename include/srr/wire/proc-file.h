@@ -12,7 +12,7 @@
 #include <srr/wire/proc.h>
 
 struct proc_file_attach {
-	int32_t code, fd, nid, pid, vid, handle, flags;
+	int32_t code, fd, nid, pid, vid, handle, flags, pad;
 };
 
 struct proc_file_detach {
@@ -20,7 +20,7 @@ struct proc_file_detach {
 };
 
 struct proc_file_query {
-	int32_t code, pid, fd;
+	int32_t code, pid, fd, pad;
 };
 
 #endif  /* SRR_WIRE_PROC_FILE_H */
