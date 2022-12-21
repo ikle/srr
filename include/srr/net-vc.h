@@ -35,7 +35,7 @@ struct net_vc_info {
  * about the virtual process.
  */
 int net_vc_attach  (int nid, int pid, int len, int flags);
-int net_vc_detach  (int pid);
+int net_vc_detach  (int vid);
 int net_vc_connect (int nid, const char *name, int len, int flags);
 int net_vc_query   (int vid, struct net_vc_info *vi);
 
