@@ -10,9 +10,10 @@
 #define SRR_PROC_NAME_H  1
 
 #include <stddef.h>
+#include <stdint.h>
 
 struct proc_name_info {
-	int pid, uid, gid, mode;
+	int32_t pid, uid, gid, mode;
 	char name[];
 };
 
