@@ -13,7 +13,7 @@
 
 struct proc_name_req {
 	int32_t code;
-	char name[16];
+	char name[20];
 };
 
 #endif  /* SRR_WIRE_PROC_NAME_H */
