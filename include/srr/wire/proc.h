@@ -14,6 +14,8 @@
 #define PROC_PID  1
 
 enum proc_code {
+	PROC_CONTROL_OPS	= 0x00,
+
 	PROC_NAME_ATTACH	= 0x80,
 	PROC_NAME_DETACH,
 	PROC_NAME_LOOKUP,
