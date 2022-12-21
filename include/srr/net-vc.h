@@ -9,8 +9,10 @@
 #ifndef SRR_NET_VC_H
 #define SRR_NET_VC_H  1
 
+#include <stdint.h>
+
 struct net_vc_info {
-	int nid, pid, len, flags;
+	int32_t nid, pid, len, flags;
 };
 
 /*
