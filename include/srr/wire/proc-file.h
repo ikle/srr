@@ -9,15 +9,7 @@
 #ifndef SRR_WIRE_PROC_FILE_H
 #define SRR_WIRE_PROC_FILE_H  1
 
-#include <stdint.h>
-
-#define PROC_PID  1
-
-enum proc_file {
-	PROC_FILE_ATTACH,
-	PROC_FILE_DETACH,
-	PROC_FILE_QUERY,
-};
+#include <srr/wire/proc.h>
 
 struct proc_file_attach {
 	int32_t code, fd, nid, pid, vid, handle, flags;
