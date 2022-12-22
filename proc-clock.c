@@ -13,8 +13,6 @@ int proc_clock_gettime (int proc, int clock, struct proc_time *time)
 {
 	struct proc_clock_gettime req;
 
-	proc = proc == 0 ? PROC_PID : proc;
-
 	req.code  = PROC_CLOCK_GETTIME;
 	req.clock = clock;
 
@@ -24,8 +22,6 @@ int proc_clock_gettime (int proc, int clock, struct proc_time *time)
 int proc_clock_settime (int proc, int clock, const struct proc_time *time)
 {
 	struct proc_clock_settime req;
-
-	proc = proc == 0 ? PROC_PID : proc;
 
 	req.code  = PROC_CLOCK_SETTIME;
 	req.clock = clock;
@@ -39,8 +35,6 @@ int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
 {
 	const size_t alen = left == NULL ? 0 : sizeof (*left);
 	struct proc_clock_adjtime req;
-
-	proc = proc == 0 ? PROC_PID : proc;
 
 	req.code  = PROC_CLOCK_ADJTIME;
 	req.clock = clock;
