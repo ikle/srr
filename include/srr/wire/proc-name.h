@@ -11,7 +11,22 @@
 
 #include <srr/wire/proc.h>
 
-struct proc_name_req {
+struct proc_name_attach {
+	int32_t code;
+	char name[20];
+};
+
+struct proc_name_detach {
+	int32_t code;
+	char name[20];
+};
+
+struct proc_name_lookup {
+	int32_t code;
+	char name[20];
+};
+
+struct proc_name_query {
 	int32_t code;
 	char name[20];
 };

@@ -28,9 +28,9 @@
  * of entries saved. To search from the beginning of the list of names,
  * specify after = NULL.
  */
-int proc_name_attach (int proc, const char *fmt, ...);
-int proc_name_detach (int proc, const char *fmt, ...);
-int proc_name_lookup (int proc, const char *fmt, ...);
+int proc_name_attach (int proc, const char *name);
+int proc_name_detach (int proc, const char *name);
+int proc_name_lookup (int proc, const char *name);
 int proc_name_query  (int proc, const char *after,
 		      struct proc_name_info *ni, size_t count);
 
