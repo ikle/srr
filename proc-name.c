@@ -49,7 +49,7 @@ int proc_name_query (int proc, const char *after,
 	req.code = PROC_NAME_QUERY;
 
 	if (after == NULL)
-		memset (req.name, '\0', sizeof (req.name));
+		memset  (req.name, '\0',  sizeof (req.name));
 	else
 		stpncpy (req.name, after, sizeof (req.name));
 
