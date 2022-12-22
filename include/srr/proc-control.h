@@ -10,7 +10,8 @@
 #define SRR_PROC_CONTROL_H  1
 
 #include <stddef.h>
-#include <stdint.h>
+
+#include <srr/wire/proc.h>
 
 /*
  * Functions that change the value of process parameters always return
@@ -30,7 +31,7 @@ enum proc_op {
 	PROC_MLS	= 8,		/* MLS level			*/
 	PROC_MCS	= 9,		/* MCS categories		*/
 
-	PROC_PID	= 10,		/* process identifier		*/
+	PROC_ID		= 10,		/* process identifier		*/
 	PROC_PPID	= 11,		/* parent process		*/
 	PROC_PGRP	= 12,		/* process group		*/
 	PROC_SID	= 13,		/* session leader		*/

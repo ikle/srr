@@ -9,8 +9,6 @@
 #include <srr/msg.h>
 #include <srr/proc-control.h>
 
-#include <srr/wire/proc.h>
-
 int proc_control (int proc, const int32_t *req, int32_t *ans, size_t count)
 {
 	const size_t size = sizeof (req[0]) * 2 * count;
