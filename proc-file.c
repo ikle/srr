@@ -57,9 +57,11 @@ int proc_file_query (int proc, int pid, int fd, struct proc_file_info *fi)
 {
 	struct proc_file_query req;
 
+	proc = proc == 0 ? PROC_PID : proc;
+
 	req.code = PROC_FILE_QUERY;
 	req.pid  = pid;
 	req.fd   = fd;
 
-	return msg_send (PROC_PID, &req, sizeof (req), fi, sizeof (*fi));
+	return msg_send (proc, &req, sizeof (req), fi, sizeof (*fi));
 }
