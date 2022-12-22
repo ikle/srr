@@ -10,8 +10,6 @@
 #include <srr/net-vc.h>
 #include <srr/proc-file.h>
 
-#include <srr/wire/proc-file.h>
-
 int proc_file_attach (int fd, int nid, int pid, int vid, int handle, int flags)
 {
 	struct net_vc_info vi;

@@ -9,7 +9,7 @@
 #ifndef SRR_PROC_FILE_H
 #define SRR_PROC_FILE_H  1
 
-#include <stdint.h>
+#include <srr/wire/proc-file.h>
 
 enum proc_file_flag {
 	PROC_FILE_PRIVATE	= 0x01,	/* do not copy to childs	*/
