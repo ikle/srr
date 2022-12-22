@@ -23,4 +23,8 @@ struct net_vc_query {
 	int32_t code, vid;
 };
 
+struct net_vc_info {
+	int32_t nid, pid, len, flags;
+};
+
 #endif  /* SRR_WIRE_NET_VC_H */

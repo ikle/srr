@@ -11,10 +11,6 @@
 
 #include <srr/wire/net-vc.h>
 
-struct net_vc_info {
-	int32_t nid, pid, len, flags;
-};
-
 /*
  * The virtual circuit process is a message proxy process (forked from
  * the net process) reparented and reowned to the caller process.
