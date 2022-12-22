@@ -10,7 +10,8 @@
 #define SRR_PROC_NAME_H  1
 
 #include <stddef.h>
-#include <stdint.h>
+
+#include <srr/wire/proc-name.h>
 
 struct proc_name_info {
 	int32_t pid;

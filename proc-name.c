@@ -12,8 +12,6 @@
 #include <srr/msg.h>
 #include <srr/proc-name.h>
 
-#include <srr/wire/proc-name.h>
-
 static int proc_name_req_va (int proc, int code, const char *fmt, va_list ap)
 {
 	struct proc_name_req req;
