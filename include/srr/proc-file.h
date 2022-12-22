@@ -11,18 +11,6 @@
 
 #include <srr/wire/proc-file.h>
 
-enum proc_file_flag {
-	PROC_FILE_PRIVATE	= 0x01,	/* do not copy to childs	*/
-};
-
-/*
- * If the resource is on the local node then nid = 0, vid = pid.
- */
-struct proc_file_info {
-	int32_t nid, pid, vid, handle;	/* resource location		*/
-	int32_t flags;
-};
-
 /*
  * Sharing files on spawn to a new process (fork or fork + exec):
  *
