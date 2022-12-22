@@ -33,7 +33,7 @@ struct proc_name_query {
 
 struct proc_name_info {
 	int32_t pid;
-	char name[16];
+	char name[20];
 };
 
 #endif  /* SRR_WIRE_PROC_NAME_H */
