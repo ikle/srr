@@ -11,7 +11,7 @@
 
 #include <srr/wire/proc.h>
 
-struct proc_timespec {
+struct proc_time {
 	int64_t sec;
 	int64_t nsec;
 };
@@ -22,7 +22,7 @@ struct proc_clock_gettime {
 
 struct proc_clock_settime {
 	int32_t code, clock;
-	struct proc_timespec ts;
+	struct proc_time time;
 };
 
 struct proc_clock_adjtime {

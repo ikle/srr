@@ -9,7 +9,7 @@
 #ifndef SRR_PROC_CLOCK_H
 #define SRR_PROC_CLOCK_H  1
 
-#include <time.h>
+#include <srr/wire/proc-clock.h>
 
 /*
  * The function proc_clock_gettime retrieve the time of the specified
@@ -23,8 +23,8 @@
  * the entire delta amount. If the left is not NULL, then the remaining
  * delta is stored in it.
  */
-int proc_clock_gettime (int proc, int clock, struct timespec *ts);
-int proc_clock_settime (int proc, int clock, const struct timespec *ts);
+int proc_clock_gettime (int proc, int clock, struct proc_time *time);
+int proc_clock_settime (int proc, int clock, const struct proc_time *time);
 int proc_clock_adjtime (int proc, int clock, long delta, int rate, long *left);
 
 #endif  /* SRR_PROC_CLOCK_H */

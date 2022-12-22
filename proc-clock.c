@@ -9,34 +9,23 @@
 #include <srr/msg.h>
 #include <srr/proc-clock.h>
 
-#include <srr/wire/proc-clock.h>
-
-int proc_clock_gettime (int proc, int clock, struct timespec *ts)
+int proc_clock_gettime (int proc, int clock, struct proc_time *time)
 {
 	struct proc_clock_gettime req;
-	struct proc_timespec ans;
-	int ret;
 
 	req.code  = PROC_CLOCK_GETTIME;
 	req.clock = clock;
 
-	ret = msg_send (PROC_PID, &req, sizeof (req), &ans, sizeof (ans));
-	if (ret < 0)
-		return ret;
-
-	ts->tv_sec  = ans.sec;
-	ts->tv_nsec = ans.nsec;
-	return ret;
+	return msg_send (PROC_PID, &req, sizeof (req), time, sizeof (*time));
 }
 
-int proc_clock_settime (int proc, int clock, const struct timespec *ts)
+int proc_clock_settime (int proc, int clock, const struct proc_time *time)
 {
 	struct proc_clock_settime req;
 
-	req.code    = PROC_CLOCK_SETTIME;
-	req.clock   = clock;
-	req.ts.sec  = ts->tv_sec;
-	req.ts.nsec = ts->tv_nsec;
+	req.code  = PROC_CLOCK_SETTIME;
+	req.clock = clock;
+	req.time  = *time;
 
 	return msg_send (PROC_PID, &req, sizeof (req), NULL, 0);
 }
