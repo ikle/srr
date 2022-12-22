@@ -16,4 +16,9 @@ struct proc_name_req {
 	char name[20];
 };
 
+struct proc_name_info {
+	int32_t pid;
+	char name[16];
+};
+
 #endif  /* SRR_WIRE_PROC_NAME_H */

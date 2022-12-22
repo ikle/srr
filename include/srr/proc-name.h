@@ -13,11 +13,6 @@
 
 #include <srr/wire/proc-name.h>
 
-struct proc_name_info {
-	int32_t pid;
-	char name[16];
-};
-
 /*
  * The function proc_name_attach associates a name with the calling
  * process. Returns 0 on success.
