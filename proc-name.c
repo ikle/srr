@@ -15,36 +15,44 @@ int proc_name_attach (int proc, const char *name)
 {
 	struct proc_name_attach req;
 
+	proc = proc == 0 ? PROC_PID : proc;
+
 	req.code = PROC_NAME_ATTACH;
 	stpncpy (req.name, name, sizeof (req.name));
 
-	return msg_send (PROC_PID, &req, sizeof (req), NULL, 0);
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
 int proc_name_detach (int proc, const char *name)
 {
 	struct proc_name_detach req;
 
+	proc = proc == 0 ? PROC_PID : proc;
+
 	req.code = PROC_NAME_DETACH;
 	stpncpy (req.name, name, sizeof (req.name));
 
-	return msg_send (PROC_PID, &req, sizeof (req), NULL, 0);
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
 int proc_name_lookup (int proc, const char *name)
 {
 	struct proc_name_lookup req;
 
+	proc = proc == 0 ? PROC_PID : proc;
+
 	req.code = PROC_NAME_LOOKUP;
 	stpncpy (req.name, name, sizeof (req.name));
 
-	return msg_send (PROC_PID, &req, sizeof (req), NULL, 0);
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
 int proc_name_query (int proc, const char *after,
 		     struct proc_name_info *ni, size_t count)
 {
 	struct proc_name_query req;
+
+	proc = proc == 0 ? PROC_PID : proc;
 
 	req.code = PROC_NAME_QUERY;
 
@@ -53,6 +61,5 @@ int proc_name_query (int proc, const char *after,
 	else
 		stpncpy (req.name, after, sizeof (req.name));
 
-	return msg_send (PROC_PID, &req, sizeof (req),
-			 ni, sizeof (*ni) * count);
+	return msg_send (proc, &req, sizeof (req), ni, sizeof (*ni) * count);
 }
