@@ -10,9 +10,6 @@
 #include <srr/net-vc.h>
 #include <srr/proc-name.h>
 
-#include <srr/wire/net-vc.h>
-#include <srr/wire/proc.h>
-
 int net_vc_attach (int nid, int pid, int len, int flags)
 {
 	struct net_vc_attach req;

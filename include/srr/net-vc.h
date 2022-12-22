@@ -9,7 +9,7 @@
 #ifndef SRR_NET_VC_H
 #define SRR_NET_VC_H  1
 
-#include <stdint.h>
+#include <srr/wire/net-vc.h>
 
 struct net_vc_info {
 	int32_t nid, pid, len, flags;
