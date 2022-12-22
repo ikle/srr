@@ -25,6 +25,7 @@
  */
 int proc_clock_gettime (int proc, int clock, struct proc_time *time);
 int proc_clock_settime (int proc, int clock, const struct proc_time *time);
-int proc_clock_adjtime (int proc, int clock, long delta, int rate, long *left);
+int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
+			int64_t *left);
 
 #endif  /* SRR_PROC_CLOCK_H */

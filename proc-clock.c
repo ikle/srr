@@ -30,23 +30,16 @@ int proc_clock_settime (int proc, int clock, const struct proc_time *time)
 	return msg_send (PROC_PID, &req, sizeof (req), NULL, 0);
 }
 
-int proc_clock_adjtime (int proc, int clock, long delta, int rate, long *left)
+int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
+			int64_t *left)
 {
+	const size_t alen = left == NULL ? 0 : sizeof (*left);
 	struct proc_clock_adjtime req;
-	int64_t ans;
-	int ret;
 
 	req.code  = PROC_CLOCK_ADJTIME;
 	req.clock = clock;
 	req.delta = delta;
 	req.rate  = rate;
 
-	ret = msg_send (PROC_PID, &req, sizeof (req), &ans, sizeof (ans));
-	if (ret < 0)
-		return ret;
-
-	if (left != NULL)
-		*left = ans;
-
-	return ret;
+	return msg_send (PROC_PID, &req, sizeof (req), left, alen);
 }
