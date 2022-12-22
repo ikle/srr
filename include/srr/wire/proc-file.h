@@ -32,7 +32,7 @@ enum proc_file_flag {
  */
 struct proc_file_info {
 	int32_t nid, pid, vid, handle;	/* resource location */
-	int32_t flags;
+	int32_t flags, pad;
 };
 
 #endif  /* SRR_WIRE_PROC_FILE_H */
