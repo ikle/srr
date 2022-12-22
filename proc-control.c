@@ -11,7 +11,7 @@
 
 int proc_control (int proc, const int32_t *req, int32_t *ans, size_t count)
 {
-	const size_t size = sizeof (req[0]) * 2 * count;
+	const size_t len = sizeof (req[0]) * 2 * count;
 
-	return msg_send (PROC_PID, req, size, ans, size);
+	return msg_send (PROC_PID, req, len, ans, len);
 }
