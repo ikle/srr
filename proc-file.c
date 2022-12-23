@@ -39,6 +39,7 @@ int proc_file_attach (int fd, int nid, int pid, int vid, int handle, int flags)
 	req.vid    = vid;
 	req.handle = handle;
 	req.flags  = flags;
+	req.pad    = 0;
 
 	return msg_send (PROC_PID, &req, sizeof (req), NULL, 0);
 }
@@ -60,6 +61,7 @@ int proc_file_query (int proc, int pid, int fd, struct proc_file_info *fi)
 	req.code = PROC_FILE_QUERY;
 	req.pid  = pid;
 	req.fd   = fd;
+	req.pad  = 0;
 
 	return msg_send (proc, &req, sizeof (req), fi, sizeof (*fi));
 }
