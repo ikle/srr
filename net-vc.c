@@ -19,6 +19,7 @@ int net_vc_attach (int nid, int pid, int len, int flags)
 	req.pid   = pid;
 	req.len   = len;
 	req.flags = flags;
+	req.pad   = 0;
 
 	return msg_send (NET_PID, &req, sizeof (req), NULL, 0);
 }
