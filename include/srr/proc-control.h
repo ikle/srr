@@ -21,21 +21,6 @@
 enum proc_op {
 	PROC_TARGET	= 0,		/* select target process	*/
 
-	PROC_SCHED	= 1,		/* scheduler algorithm		*/
-	PROC_PRIO	= 2,		/* process priority		*/
-
-	PROC_CAPS	= 4,		/* process capabilities		*/
-	PROC_UID	= 5,		/* process owner		*/
-	PROC_GID	= 6,		/* process group		*/
-	PROC_MODE	= 7,		/* access to process and umask	*/
-	PROC_MLS	= 8,		/* MLS level			*/
-	PROC_MCS	= 9,		/* MCS categories		*/
-
-	PROC_ID		= 10,		/* process identifier		*/
-	PROC_PPID	= 11,		/* parent process		*/
-	PROC_PGRP	= 12,		/* process group		*/
-	PROC_SID	= 13,		/* session leader		*/
-
 	PROC_FILE	= 20,		/* select file for later ops	*/
 	PROC_DUP	= 21,		/* dup file or dup2 to selected	*/
 	PROC_CLOSE	= 22, 		/* close file			*/
