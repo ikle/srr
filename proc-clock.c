@@ -40,6 +40,7 @@ int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
 	req.clock = clock;
 	req.delta = delta;
 	req.rate  = rate;
+	req.pad   = 0;
 
 	return msg_send (proc, &req, sizeof (req), left, alen);
 }
