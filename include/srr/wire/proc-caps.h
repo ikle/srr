@@ -11,6 +11,22 @@
 
 #include <srr/wire/proc.h>
 
+enum proc_caps {
+	CAP_PROC_SCHED		= 1 << 0x2,
+	CAP_PROC_CAPS		= 1 << 0x3,
+	CAP_PROC_DAC		= 1 << 0x4,
+	CAP_PROC_MLS		= 1 << 0x5,
+	CAP_PROC_MCS		= 1 << 0x6,
+	CAP_PROC_GROUP		= 1 << 0x7,
+	CAP_PROC_NAME		= 1 << 0x8,	/* cluster service	*/
+	CAP_PROC_FILE		= 1 << 0x9,
+	CAP_PROC_CLOCK		= 1 << 0xa,
+
+	CAP_NET_ADMIN		= 1 << 0x10,
+	CAP_NET_SERVICE		= 1 << 0x11,	/* global net service	*/
+	CAP_NET_CLIENT		= 1 << 0x12,	/* global net client	*/
+};
+
 struct proc_caps_setmask {
 	int32_t code, pid, active, family;
 };
