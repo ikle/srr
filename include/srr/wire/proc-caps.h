@@ -12,6 +12,7 @@
 #include <srr/wire/proc.h>
 
 enum proc_caps {
+	CAP_PROC_SEGMENT	= 1 << 0x1,
 	CAP_PROC_SCHED		= 1 << 0x2,
 	CAP_PROC_CAPS		= 1 << 0x3,
 	CAP_PROC_DAC		= 1 << 0x4,
