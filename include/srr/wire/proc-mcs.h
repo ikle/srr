@@ -11,12 +11,12 @@
 
 #include <srr/wire/proc.h>
 
-struct proc_mcs_setcat {
+struct proc_mcs_setcats {
 	int32_t code, pid;
-	int32_t cat[];		/* can be empty */
+	int64_t cats;
 };
 
-struct proc_mcs_getcat {
+struct proc_mcs_getcats {
 	int32_t code, pid;
 };
 

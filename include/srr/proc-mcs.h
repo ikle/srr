@@ -12,7 +12,7 @@
 #include <srr/wire/proc-mcs.h>
 
 /*
- * The function proc_mcs_setcat sets the set of process MCS categories.
+ * The function proc_mcs_setcats sets the set of process MCS categories.
  * Note that unprivileged processes can only exit categories (reduce the
  * active set).
  *
@@ -21,10 +21,10 @@
  * requested one. For privileged processes, the active category set is
  * replaced by the requested one.
  *
- * The function proc_mcs_getcat queries the current set of process MCS
+ * The function proc_mcs_getcats queries the current set of process MCS
  * categories.
  */
-int proc_mcs_setcat (int proc, int pid, const int32_t *cat, size_t count);
-int proc_mcs_getcat (int proc, int pid, int32_t *cat, size_t count);
+int proc_mcs_setcats (int proc, int pid, int64_t cats);
+int proc_mcs_getcats (int proc, int pid, int64_t *cats);
 
 #endif  /* SRR_PROC_MCS_H */
