@@ -44,29 +44,3 @@ int proc_dac_query (int proc, int pid, struct proc_dac_info *di)
 
 	return msg_send (proc, &req, sizeof (req), di, sizeof (*di));
 }
-
-int proc_dac_setgroups (int proc, int pid, const int32_t *gid, size_t count)
-{
-	/* todo: use msg_send_mx to prevent extra copying */
-	struct req {
-		struct proc_dac_setgroups head;
-		int32_t gids[count];
-	} req;
-
-	req.head.code = PROC_DAC_SETGROUPS;
-	req.head.pid  = pid;
-
-	memcpy (req.gids, gid, sizeof (*gid) * count);
-
-	return msg_send (proc, &req, sizeof (req), NULL, 0);
-}
-
-int proc_dac_getgroups (int proc, int pid, int32_t *gid, size_t count)
-{
-	struct proc_dac_getgroups req;
-
-	req.code = PROC_DAC_GETGROUPS;
-	req.pid  = pid;
-
-	return msg_send (proc, &req, sizeof (req), gid, sizeof (*gid) * count);
-}

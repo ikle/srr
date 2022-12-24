@@ -27,13 +27,4 @@ struct proc_dac_query {
 	int32_t code, pid;
 };
 
-struct proc_dac_setgroups {
-	int32_t code, pid;
-	int32_t gid[];		/* can be empty */
-};
-
-struct proc_dac_getgroups {
-	int32_t code, pid;
-};
-
 #endif  /* SRR_WIRE_PROC_DAC_H */
