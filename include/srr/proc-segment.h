@@ -38,7 +38,7 @@ int proc_segment_query (int proc, int pid, long addr,
 long proc_segment_resize (int proc, int pid, long addr, long delta);
 
 /*
- * The function proc_segment_share declares a memory segment available
+ * The proc_segment_share function declares a memory segment available
  * to another process with the specified permissions.
  *
  * The function proc_segment_take maps another process's memory segment

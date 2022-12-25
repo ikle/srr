@@ -73,3 +73,10 @@ the beginning of the segments.
 The proc\_segment\_resize function changes the size of the process memory
 segment. The specified address must point into an existing segment or its
 end. Returns the address of the previous end of the segment.
+
+### Granting Access to Segments to other Processes
+
+The proc\_segment\_share function declares a memory segment available to
+another process with the specified permissions. A process can grant access to
+its segment or part of it to another process. Granting access to foreign
+segments is allowed only to processes with the CAP\_PROC\_SEGMENT capability.
