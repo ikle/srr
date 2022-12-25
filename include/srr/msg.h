@@ -34,4 +34,7 @@ int msg_read  (int pid, size_t offset, void *req, size_t len);
 int msg_write (int pid, size_t offset, const void *ans, size_t len);
 int msg_reply (int pid, int ret, const void *ans, size_t alen);
 
+long msg_lsend (int pid, const void *req, size_t rlen, void *ans, size_t alen);
+long msg_lreply (int pid, long ret, const void *ans, size_t alen);
+
 #endif  /* SRR_MSG_H */
