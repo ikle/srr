@@ -12,7 +12,7 @@
 #include <srr/wire/proc.h>
 
 struct proc_mls_setlevel {
-	int32_t code, pid, level, pad;
+	int32_t code, pid, read, write;  /* read and write level masks */
 };
 
 struct proc_mls_getlevel {

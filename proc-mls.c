@@ -9,14 +9,14 @@
 #include <srr/msg.h>
 #include <srr/proc-mls.h>
 
-int proc_mls_setlevel (int proc, int pid, int level)
+int proc_mls_setlevel (int proc, int pid, int read, int write)
 {
 	struct proc_mls_setlevel req;
 
 	req.code  = PROC_MLS_SETLEVEL;
 	req.pid   = pid;
-	req.level = level;
-	req.pad   = 0;
+	req.read  = read;
+	req.write = write;
 
 	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }

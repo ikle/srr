@@ -18,7 +18,7 @@
  * The function proc_mls_getlevel queries the MLS access level. Returns
  * current access level.
  */
-int proc_mls_setlevel (int proc, int pid, int level);
+int proc_mls_setlevel (int proc, int pid, int read, int write);
 int proc_mls_getlevel (int proc, int pid);
 
 #endif  /* SRR_PROC_MLS_H */
