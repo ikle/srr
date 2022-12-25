@@ -25,7 +25,7 @@
  * memory segment. Succeeds if a memory segment is found whose start
  * address is greater than or equal to the specified one.
  *
- * The function proc_segment_resize changes the size of the process
+ * The proc_segment_resize function changes the size of the process
  * memory segment. The specified address must point into an existing
  * segment or its end. Returns the address of the previous end of the
  * segment.

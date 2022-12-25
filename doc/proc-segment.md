@@ -67,3 +67,9 @@ segment, then it must compare its value with the address of the end of the
 segment. This behavior of this method allows you to get information about all
 segments of the process memory without knowing in advance the addresses of
 the beginning of the segments.
+
+### Changing the Size of a Memory Segment
+
+The proc\_segment\_resize function changes the size of the process memory
+segment. The specified address must point into an existing segment or its
+end. Returns the address of the previous end of the segment.
