@@ -24,3 +24,17 @@ specify zero as the target process ID. Specifying a positive process ID as
 the target is only valid for processes with CAP\_PROC\_SEGMENT capability,
 even if the calling process ID is specified. Interface functions always
 return -EINVAL when specifying a negative target process ID.
+
+## Segment Management Methods
+
+### Request Information about a Segment
+
+The proc\_segment\_query function queries information about the process
+memory segment. Succeeds if a memory segment is found whose start address is
+greater than or equal to the specified one. Note that the specified address
+may not belong to the segment whose information can be returned. If the
+caller needs to check for the occurrence of a specified address in a memory
+segment, then it must compare its value with the address of the end of the
+segment. This behavior of this method allows you to get information about all
+segments of the process memory without knowing in advance the addresses of
+the beginning of the segments.
