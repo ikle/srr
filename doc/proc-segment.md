@@ -28,6 +28,18 @@ process ID is specified.
 
 ## Segment Management Methods
 
+### Create a new Segment
+
+The proc\_segment\_alloc function allocates a memory segment of the specified
+size and associates it with an area of the specified file. In the case where
+a new segment intersects an existing one, the behavior of the function is
+undefined (UB): a concrete implementation can either delete part of the
+existing mapping or simply return an error (EBUSY).
+
+On success, returns the address of the requested segment. In case the new
+segment was merged with an existing one, the returned address may point to
+the middle of the merged segment.
+
 ### Request Information about a Segment
 
 The proc\_segment\_query function queries information about the process

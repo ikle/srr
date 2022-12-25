@@ -14,14 +14,14 @@
 #include <srr/wire/proc-segment.h>
 
 /*
- * The function proc_segment_alloc allocates a memory segment of the
- * specified size and associates it with the area of the specified file.
+ * The proc_segment_alloc function allocates a memory segment of the
+ * specified size and associates it with an area of the specified file.
  * On success, returns the starting address of the segment.
  *
  * The function proc_segment_free removes the specified memory segment
  * from the process's memory map.
  *
- * The function proc_segment_query queries information about the process
+ * The proc_segment_query function queries information about the process
  * memory segment. Succeeds if a memory segment is found whose start
  * address is greater than or equal to the specified one.
  *
