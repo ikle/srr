@@ -38,7 +38,8 @@ existing mapping or simply return an error (EBUSY).
 
 On success, returns the address of the requested segment. In case the new
 segment was merged with an existing one, the returned address may point to
-the middle of the merged segment.
+the middle of the merged segment. (In the case of using a segmented memory
+model, segments are not merged.)
 
 ### Remove a Memory Segment
 
@@ -47,6 +48,13 @@ the process's memory map. Succeeds if the segment to be removed does not
 exist. Might return an out-of-memory error (ENOMEM) if a region is removed in
 the middle of an existing segment, as such removal may require splitting the
 segment into two separate segments.
+
+In the case of using a segmented memory model, it is impossible to remove
+part of the segment region at the beginning of the segment (this would
+require changing the address of the beginning of the segment), as well as to
+remove part of the region in the middle. In this case, a busy error (EBUSY)
+is returned. (Removing an area at the end of a segment simply changes the
+size of the segment.)
 
 ### Request Information about a Segment
 
