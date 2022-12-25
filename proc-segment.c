@@ -25,7 +25,7 @@ long proc_segment_alloc (int proc, int pid, long addr, size_t len, int flags,
 	req.flags  = flags;
 	req.pad    = 0;
 
-	return msg_lsend (proc, &req, sizeof (req), NULL, 0);
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
 int proc_segment_free (int proc, int pid, long addr, size_t len)
@@ -61,7 +61,7 @@ long proc_segment_resize (int proc, int pid, long addr, long delta)
 	req.addr  = addr;
 	req.delta = delta;
 
-	return msg_lsend (proc, &req, sizeof (req), NULL, 0);
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
 int proc_segment_share (int proc, int pid, long addr, size_t len,
@@ -91,5 +91,5 @@ long proc_segment_take  (int proc, int pid, long addr, size_t len,
 	req.addr  = addr;
 	req.len   = len;
 
-	return msg_lsend (proc, &req, sizeof (req), NULL, 0);
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
