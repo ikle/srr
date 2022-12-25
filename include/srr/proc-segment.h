@@ -22,7 +22,7 @@
  * from the process's memory map.
  *
  * The function proc_segment_query queries information about the process
- * memory serment. Succeeds if a memory segment is found whose start
+ * memory segment. Succeeds if a memory segment is found whose start
  * address is greater than or equal to the specified one.
  *
  * The function proc_segment_resize changes the size of the process
