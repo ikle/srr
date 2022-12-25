@@ -18,7 +18,7 @@
  * specified size and associates it with an area of the specified file.
  * On success, returns the starting address of the segment.
  *
- * The function proc_segment_free removes the specified memory segment
+ * The proc_segment_free function removes the specified memory segment
  * from the process's memory map.
  *
  * The proc_segment_query function queries information about the process

@@ -40,6 +40,14 @@ On success, returns the address of the requested segment. In case the new
 segment was merged with an existing one, the returned address may point to
 the middle of the merged segment.
 
+### Remove a Memory Segment
+
+The proc\_segment\_free function removes the specified memory segment from
+the process's memory map. Succeeds if the segment to be removed does not
+exist. Might return an out-of-memory error (ENOMEM) if a region is removed in
+the middle of an existing segment, as such removal may require splitting the
+segment into two separate segments.
+
 ### Request Information about a Segment
 
 The proc\_segment\_query function queries information about the process
