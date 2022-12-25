@@ -41,7 +41,7 @@ long proc_segment_resize (int proc, int pid, long addr, long delta);
  * The proc_segment_share function declares a memory segment available
  * to another process with the specified permissions.
  *
- * The function proc_segment_take maps another process's memory segment
+ * The proc_segment_take function maps another process's memory segment
  * into its own address space with the specified permissions. Note that
  * the specified address is the address in the space of the source
  * process. On success, returns the starting address of the received

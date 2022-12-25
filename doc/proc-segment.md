@@ -80,3 +80,10 @@ The proc\_segment\_share function declares a memory segment available to
 another process with the specified permissions. A process can grant access to
 its segment or part of it to another process. Granting access to foreign
 segments is allowed only to processes with the CAP\_PROC\_SEGMENT capability.
+
+### Accepting Segments from another Process
+
+The proc\_segment\_take function maps another process's memory segment or
+part of it into its own address space with the specified permissions. Note
+that the specified address is the address in the space of the source process.
+On success, returns the starting address of the received segment.
