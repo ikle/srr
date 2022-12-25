@@ -4,7 +4,7 @@ A process segment represents a contiguous region of process memory with
 specific access rights and shadow storage. Segments are merged into one if
 they represent one contiguous memory region with the same permissions and
 also represent one contiguous region in the shadow storage (if they have
-such mapping).
+such mapping). The segments cannot overlap.
 
 Another process may be granted the right to map a segment of another process
 (or part of it) to its own. At the same time, access rights during such
