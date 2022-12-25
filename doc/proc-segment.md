@@ -21,9 +21,10 @@ can be done at the time of creating or importing a segment.
 
 Users of the interface to manage their own process memory segments should
 specify zero as the target process ID. Specifying a positive process ID as
-the target is only valid for processes with CAP\_PROC\_SEGMENT capability,
-even if the calling process ID is specified. Interface functions always
-return -EINVAL when specifying a negative target process ID.
+the target for methods that change the process memory map is valid only for
+processes with CAP\_PROC\_SEGMENT capability, even if the calling process ID
+is specified. Interface functions always return -EINVAL if a negative target
+process ID is specified.
 
 ## Segment Management Methods
 
