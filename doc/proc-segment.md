@@ -16,3 +16,11 @@ write permission has been granted by the sender. When process tries to write
 to such segment, a new memory mapping of its memory will be created, into
 which the original contents will be copied. For real-time tasks, such copying
 can be done at the time of creating or importing a segment.
+
+## General Provisions of the Interface
+
+Users of the interface to manage their own process memory segments should
+specify zero as the target process ID. Specifying a positive process ID as
+the target is only valid for processes with CAP\_PROC\_SEGMENT capability,
+even if the calling process ID is specified. Interface functions always
+return -EINVAL when specifying a negative target process ID.
