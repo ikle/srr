@@ -44,3 +44,25 @@ int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
 
 	return msg_send (proc, &req, sizeof (req), left, alen);
 }
+
+int proc_clock_setres (int proc, int clock, int32_t nsec)
+{
+	struct proc_clock_setres req;
+
+	req.code  = PROC_CLOCK_SETRES;
+	req.clock = clock;
+	req.nsec  = nsec;
+	req.pad   = 0;
+
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
+}
+
+int proc_clock_getres (int proc, int clock)
+{
+	struct proc_clock_getres req;
+
+	req.code  = PROC_CLOCK_GETRES;
+	req.clock = clock;
+
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
+}

@@ -31,4 +31,12 @@ struct proc_clock_adjtime {
 	int32_t rate, pad;
 };
 
+struct proc_clock_setres {
+	int32_t code, clock, nsec, pad;
+};
+
+struct proc_clock_getres {
+	int32_t code, clock;
+};
+
 #endif  /* SRR_WIRE_PROC_CLOCK_H */

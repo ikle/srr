@@ -28,4 +28,12 @@ int proc_clock_settime (int proc, int clock, const struct proc_time *time);
 int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
 			int64_t *left);
 
+/*
+ * The function proc_clock_setres sets resolution for the specified clock.
+ *
+ * The function proc_clock_getres returns resolution of the specified clock.
+ */
+int proc_clock_setres (int proc, int clock, int32_t nsec);
+int proc_clock_getres (int proc, int clock);
+
 #endif  /* SRR_PROC_CLOCK_H */
