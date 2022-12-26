@@ -14,6 +14,9 @@
 #define PROC_PID  1
 
 enum proc_code {
+	PROC_SPAWN		= 0x00,  // elf-loader copied from proc space to new process...
+	PROC_SPAWN_DONE,
+
 	PROC_SEGMENT_ALLOC	= 0x10,
 	PROC_SEGMENT_FREE,
 	PROC_SEGMENT_QUERY,
