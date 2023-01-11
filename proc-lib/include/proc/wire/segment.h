@@ -1,15 +1,15 @@
 /*
- * SRR Process Segments: Wire Format
+ * Marten Process Segments: Wire Format
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_WIRE_PROC_SEGMENT_H
-#define SRR_WIRE_PROC_SEGMENT_H  1
+#ifndef PROC_WIRE_SEGMENT_H
+#define PROC_WIRE_SEGMENT_H  1
 
-#include <srr/wire/proc.h>
+#include <proc/wire/core.h>
 
 /* manage process memory map */
 
@@ -52,4 +52,4 @@ struct proc_segment_take {
 	uint64_t addr, len;
 };
 
-#endif  /* SRR_WIRE_PROC_SEGMENT_H */
+#endif  /* PROC_WIRE_SEGMENT_H */

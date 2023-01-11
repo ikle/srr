@@ -1,17 +1,17 @@
 /*
- * SRR Process Segments
+ * Marten Process Segments
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_PROC_SEGMENT_H
-#define SRR_PROC_SEGMENT_H  1
+#ifndef PROC_SEGMENT_H
+#define PROC_SEGMENT_H  1
 
 #include <stddef.h>
 
-#include <srr/wire/proc-segment.h>
+#include <proc/wire/segment.h>
 
 /*
  * The proc_segment_alloc function allocates a memory segment of the
@@ -52,4 +52,4 @@ int proc_segment_share (int proc, int pid, long addr, size_t len,
 long proc_segment_take (int proc, int pid, long addr, size_t len,
 			int from, int flags);
 
-#endif  /* SRR_PROC_SEGMENT_H */
+#endif  /* PROC_SEGMENT_H */

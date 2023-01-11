@@ -1,5 +1,5 @@
 /*
- * SRR Process Segments
+ * Marten Process Segments
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <srr/proc-segment.h>
+#include <proc/segment.h>
 
 long proc_segment_alloc (int proc, int pid, long addr, size_t len, int flags,
 			 int vid, int handle, uint64_t offset, size_t flen)
