@@ -1,15 +1,15 @@
 /*
- * SRR Process Scheduler
+ * Marten Process Scheduler
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_PROC_SCHED_H
-#define SRR_PROC_SCHED_H  1
+#ifndef PROC_SCHED_H
+#define PROC_SCHED_H  1
 
-#include <srr/wire/proc-sched.h>
+#include <proc/wire/sched.h>
 
 /*
  * The function proc_sched_config changes the process scheduling algorithm
@@ -33,4 +33,4 @@ int proc_sched_query  (int proc, int pid, struct proc_sched_info *si);
 int proc_sched_nice   (int proc, int pid, int delta,  int flags);
 int proc_sched_yield  (int target);
 
-#endif  /* SRR_PROC_SCHED_H */
+#endif  /* PROC_SCHED_H */

@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <srr/proc-sched.h>
+#include <proc/sched.h>
 
 int proc_sched_config (int proc, int pid, int policy, int prio)
 {

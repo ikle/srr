@@ -1,15 +1,15 @@
 /*
- * SRR Process Scheduler: Wire Format
+ * Marten Process Scheduler: Wire Format
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_WIRE_PROC_SCHED_H
-#define SRR_WIRE_PROC_SCHED_H  1
+#ifndef PROC_WIRE_SCHED_H
+#define PROC_WIRE_SCHED_H  1
 
-#include <srr/wire/proc.h>
+#include <proc/wire/core.h>
 
 struct proc_sched_config {
 	int32_t code, pid, policy, prio;
@@ -31,4 +31,4 @@ struct proc_sched_yield {
 	int32_t code, target;
 };
 
-#endif  /* SRR_WIRE_PROC_SCHED_H */
+#endif  /* PROC_WIRE_SCHED_H */
