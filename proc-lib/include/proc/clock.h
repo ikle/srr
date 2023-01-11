@@ -1,15 +1,15 @@
 /*
- * SRR Process Clocks
+ * Marten Process Clocks
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_PROC_CLOCK_H
-#define SRR_PROC_CLOCK_H  1
+#ifndef PROC_CLOCK_H
+#define PROC_CLOCK_H  1
 
-#include <srr/wire/proc-clock.h>
+#include <proc/wire/clock.h>
 
 /*
  * The function proc_clock_gettime retrieve the time of the specified
@@ -36,4 +36,4 @@ int proc_clock_adjtime (int proc, int clock, int64_t delta, int rate,
 int proc_clock_setres (int proc, int clock, int32_t nsec);
 int proc_clock_getres (int proc, int clock);
 
-#endif  /* SRR_PROC_CLOCK_H */
+#endif  /* PROC_CLOCK_H */

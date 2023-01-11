@@ -1,15 +1,15 @@
 /*
- * SRR Process Clocks: Wire Format
+ * Marten Process Clocks: Wire Format
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_WIRE_PROC_CLOCK_H
-#define SRR_EIRE_PROC_CLOCK_H  1
+#ifndef PROC_WIRE_CLOCK_H
+#define PROC_WIRE_CLOCK_H  1
 
-#include <srr/wire/proc.h>
+#include <proc/wire/core.h>
 
 struct proc_time {
 	int64_t sec;
@@ -39,4 +39,4 @@ struct proc_clock_getres {
 	int32_t code, clock;
 };
 
-#endif  /* SRR_WIRE_PROC_CLOCK_H */
+#endif  /* PROC_WIRE_CLOCK_H */

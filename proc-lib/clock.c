@@ -1,5 +1,5 @@
 /*
- * SRR Process Clocks
+ * Marten Process Clocks
  *
  * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
  *
@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <srr/proc-clock.h>
+#include <proc/clock.h>
 
 int proc_clock_gettime (int proc, int clock, struct proc_time *time)
 {
