@@ -16,8 +16,6 @@ enum proc_caps {
 	CAP_PROC_SCHED		= 1 << 0x2,
 	CAP_PROC_CAPS		= 1 << 0x3,
 	CAP_PROC_DAC		= 1 << 0x4,
-	CAP_PROC_MLS		= 1 << 0x5,
-	CAP_PROC_MCS		= 1 << 0x6,
 	CAP_PROC_GROUP		= 1 << 0x7,
 	CAP_PROC_NAME		= 1 << 0x8,	/* cluster service	*/
 	CAP_PROC_FILE		= 1 << 0x9,
