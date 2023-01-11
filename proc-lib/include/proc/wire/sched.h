@@ -27,6 +27,14 @@ struct proc_sched_nice {
 	int32_t code, pid, delta, flags;
 };
 
+struct proc_sched_start {
+	int32_t code, pid;
+};
+
+struct proc_sched_stop {
+	int32_t code, pid;
+};
+
 struct proc_sched_yield {
 	int32_t code, target;
 };

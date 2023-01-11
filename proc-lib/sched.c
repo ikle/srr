@@ -43,6 +43,26 @@ int proc_sched_nice (int proc, int pid, int delta, int flags)
 	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
+int proc_sched_start (int proc, int pid)
+{
+	struct proc_sched_start req;
+
+	req.code = PROC_SCHED_START;
+	req.pid  = pid;
+
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
+}
+
+int proc_sched_stop (int proc, int pid)
+{
+	struct proc_sched_stop req;
+
+	req.code = PROC_SCHED_STOP;
+	req.pid  = pid;
+
+	return msg_send (proc, &req, sizeof (req), NULL, 0);
+}
+
 int proc_sched_yield (int target)
 {
 	struct proc_sched_yield req;

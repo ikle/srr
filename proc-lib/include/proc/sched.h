@@ -22,15 +22,25 @@
  *
  * The function proc_sched_nice changes the process priority by adding
  * delta to it. If successful, returns the new priority value.
+ */
+int proc_sched_config (int proc, int pid, int policy, int prio);
+int proc_sched_query  (int proc, int pid, struct proc_sched_info *si);
+int proc_sched_nice   (int proc, int pid, int delta,  int flags);
+
+/*
+ * The function proc_sched_start queues the specified process for
+ * execution. Returns 0 on success.
+ *
+ * The function proc_sched_stop removes the specified process from the
+ * execution queue. Returns 0 on success.
  *
  * The function proc_sched_yield causes the calling process to yield
  * execution to another process. If target is positive and the specified
  * process is not blocked, then execution yields to it. Otherwise,
  * execution is passed to the next process in the execution queue.
  */
-int proc_sched_config (int proc, int pid, int policy, int prio);
-int proc_sched_query  (int proc, int pid, struct proc_sched_info *si);
-int proc_sched_nice   (int proc, int pid, int delta,  int flags);
+int proc_sched_start  (int proc, int pid);
+int proc_sched_stop   (int proc, int pid);
 int proc_sched_yield  (int target);
 
 #endif  /* PROC_SCHED_H */
