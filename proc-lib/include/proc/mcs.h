@@ -1,15 +1,15 @@
 /*
- * SRR Process Multi-Category Security
+ * Marten Process Multi-Category Security
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_PROC_MCS_H
-#define SRR_PROC_MCS_H  1
+#ifndef PROC_MCS_H
+#define PROC_MCS_H  1
 
-#include <srr/wire/proc-mcs.h>
+#include <proc/wire/mcs.h>
 
 /*
  * The function proc_mcs_setcats sets the set of process MCS categories.
@@ -27,4 +27,4 @@
 int proc_mcs_setcats (int proc, int pid, int64_t cats);
 int proc_mcs_getcats (int proc, int pid, int64_t *cats);
 
-#endif  /* SRR_PROC_MCS_H */
+#endif  /* PROC_MCS_H */

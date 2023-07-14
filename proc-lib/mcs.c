@@ -1,13 +1,13 @@
 /*
- * SRR Process Multi-Category Security
+ * Marten Process Multi-Category Security
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
 #include <srr/msg.h>
-#include <srr/proc-mcs.h>
+#include <proc/mcs.h>
 
 int proc_mcs_setcats (int proc, int pid, int64_t cats)
 {
