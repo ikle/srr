@@ -1,15 +1,15 @@
 /*
- * SRR Process Capabilities
+ * Marten Process Capabilities
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_PROC_CAPS_H
-#define SRR_PROC_CAPS_H  1
+#ifndef PROC_CAPS_H
+#define PROC_CAPS_H  1
 
-#include <srr/wire/proc-caps.h>
+#include <proc/wire/caps.h>
 
 /*
  * The function proc_caps_config sets the active and inherited
@@ -21,4 +21,4 @@
 int proc_caps_setmask (int proc, int pid, int active, int family);
 int proc_caps_query   (int proc, int pid, struct proc_caps_info *ci);
 
-#endif  /* SRR_PROC_CAPS_H */
+#endif  /* PROC_CAPS_H */

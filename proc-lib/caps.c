@@ -1,13 +1,13 @@
 /*
- * SRR Process Capabilities
+ * Marten Process Capabilities
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
 #include <srr/msg.h>
-#include <srr/wire/proc-caps.h>
+#include <proc/caps.h>
 
 int proc_caps_setmask (int proc, int pid, int active, int family)
 {

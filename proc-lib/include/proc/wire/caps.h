@@ -1,15 +1,15 @@
 /*
- * SRR Process Capabilities: Wire Format
+ * Marten Process Capabilities: Wire Format
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_WIRE_PROC_CAPS_H
-#define SRR_WIRE_PROC_CAPS_H  1
+#ifndef PROC_WIRE_CAPS_H
+#define PROC_WIRE_CAPS_H  1
 
-#include <srr/wire/proc.h>
+#include <proc/wire/core.h>
 
 enum proc_caps {
 	CAP_PROC_SEGMENT	= 1 << 0x1,
@@ -38,4 +38,4 @@ struct proc_caps_query {
 	int32_t code, pid;
 };
 
-#endif  /* SRR_WIRE_PROC_CAPS_H */
+#endif  /* PROC_WIRE_CAPS_H */
