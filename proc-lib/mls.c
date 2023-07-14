@@ -1,13 +1,13 @@
 /*
- * SRR Process Multi-Level Security
+ * Marten Process Multi-Level Security
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
 #include <srr/msg.h>
-#include <srr/proc-mls.h>
+#include <proc/mls.h>
 
 int proc_mls_setlevel (int proc, int pid, int read, int write)
 {
