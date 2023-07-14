@@ -1,15 +1,15 @@
 /*
- * SRR Process Discretionary Access Control: Wire Format
+ * Marten Process Discretionary Access Control: Wire Format
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_WIRE_PROC_DAC_H
-#define SRR_WIRE_PROC_DAC_H  1
+#ifndef PROC_WIRE_DAC_H
+#define PROC_WIRE_DAC_H  1
 
-#include <srr/wire/proc.h>
+#include <proc/wire/core.h>
 
 struct proc_dac_setids {
 	int32_t code, pid, uid, gid;
@@ -27,4 +27,4 @@ struct proc_dac_query {
 	int32_t code, pid;
 };
 
-#endif  /* SRR_WIRE_PROC_DAC_H */
+#endif  /* PROC_WIRE_DAC_H */

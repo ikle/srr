@@ -1,7 +1,7 @@
 /*
- * SRR Process Discretionary Access Control
+ * Marten Process Discretionary Access Control
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
@@ -9,7 +9,7 @@
 #include <string.h>
 
 #include <srr/msg.h>
-#include <srr/proc-dac.h>
+#include <proc/dac.h>
 
 int proc_dac_setids (int proc, int pid, int uid, int gid)
 {
