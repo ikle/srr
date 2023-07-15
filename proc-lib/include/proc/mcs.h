@@ -24,7 +24,7 @@
  * The function proc_mcs_getcats queries the current set of process MCS
  * categories.
  */
-int proc_mcs_setcats (int proc, int pid, int64_t cats);
+int proc_mcs_setcats (int proc, int pid, int64_t  cats);
 int proc_mcs_getcats (int proc, int pid, int64_t *cats);
 
 #endif  /* PROC_MCS_H */
