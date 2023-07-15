@@ -13,18 +13,15 @@
 
 /*
  * The function proc_mcs_setcats sets the set of process MCS categories.
- * Note that unprivileged processes can only exit categories (reduce the
- * active set).
- *
- * The function always succeeds, setting the active category set for
- * unprivileged processes to the intersection of the current set and the
- * requested one. For privileged processes, the active category set is
- * replaced by the requested one.
+ * The function always succeeds, setting the family category set to the
+ * intersection of the current family set and the requested one. The active
+ * category set is replaced by the intersection of the new family set and
+ * requested active set.
  *
  * The function proc_mcs_getcats queries the current set of process MCS
  * categories.
  */
-int proc_mcs_setcats (int proc, int pid, int64_t  cats);
-int proc_mcs_getcats (int proc, int pid, int64_t *cats);
+int proc_mcs_setcats (int proc, int pid, int64_t active, int64_t family);
+int proc_mcs_getcats (int proc, int pid, struct proc_mcs_info *mi);
 
 #endif  /* PROC_MCS_H */
