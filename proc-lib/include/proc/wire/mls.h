@@ -11,6 +11,12 @@
 
 #include <proc/wire/core.h>
 
+/*
+ * new mls.read  = current mls.read  & requested mls.read
+ * new mls.write = current mls.write & requested mls.write
+ *
+ * Returns -EPERM if any new level mask is zero.
+ */
 struct proc_mls_setlevel {
 	int32_t code, pid, read, write;  /* read and write level masks */
 };

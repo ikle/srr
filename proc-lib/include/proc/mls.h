@@ -12,8 +12,9 @@
 #include <proc/wire/mls.h>
 
 /*
- * The function proc_mls_setlevel sets the MLS access level masks.
- * Returns 0 on success.
+ * The function proc_mls_setlevel sets the MLS access level masks to
+ * intersection of current level masks with requested ones. Returns -EPERM
+ * if any new level mask is zero. Returns 0 on success.
  *
  * The function proc_mls_getlevel queries the MLS access level masks.
  * Returns 0 on success.
