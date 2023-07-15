@@ -18,7 +18,7 @@
  * The function proc_mls_getlevel queries the MLS access level masks.
  * Returns 0 on success.
  */
-int proc_mls_setlevel (int proc, int pid, int  read, int  write);
-int proc_mls_getlevel (int proc, int pid, int *read, int *write);
+int proc_mls_setlevel (int proc, int pid, int read, int write);
+int proc_mls_getlevel (int proc, int pid, struct proc_mls_info *mi);
 
 #endif  /* PROC_MLS_H */

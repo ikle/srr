@@ -21,19 +21,12 @@ int proc_mls_setlevel (int proc, int pid, int read, int write)
 	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
 
-int proc_mls_getlevel (int proc, int pid, int *read, int *write)
+int proc_mls_getlevel (int proc, int pid, struct proc_mls_info *mi)
 {
 	struct proc_mls_getlevel req;
-	int32_t ans[2];
-	int ret;
 
 	req.code = PROC_MLS_GETLEVEL;
 	req.pid  = pid;
 
-	if ((ret = msg_send (proc, &req, sizeof (req), ans, 2)) == 0) {
-		*read  = ans[0];
-		*write = ans[1];
-	}
-
-	return ret;
+	return msg_send (proc, &req, sizeof (req), mi, sizeof (*mi));
 }
