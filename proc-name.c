@@ -16,7 +16,7 @@ int proc_name_attach (int proc, const char *name)
 	struct proc_name_attach req;
 
 	req.code = PROC_NAME_ATTACH;
-	stpncpy (req.name, name, sizeof (req.name));
+	strncpy (req.name, name, sizeof (req.name));
 
 	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
@@ -26,7 +26,7 @@ int proc_name_detach (int proc, const char *name)
 	struct proc_name_detach req;
 
 	req.code = PROC_NAME_DETACH;
-	stpncpy (req.name, name, sizeof (req.name));
+	strncpy (req.name, name, sizeof (req.name));
 
 	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
@@ -36,7 +36,7 @@ int proc_name_lookup (int proc, const char *name)
 	struct proc_name_lookup req;
 
 	req.code = PROC_NAME_LOOKUP;
-	stpncpy (req.name, name, sizeof (req.name));
+	strncpy (req.name, name, sizeof (req.name));
 
 	return msg_send (proc, &req, sizeof (req), NULL, 0);
 }
@@ -51,7 +51,7 @@ int proc_name_query (int proc, const char *after,
 	if (after == NULL)
 		memset  (req.name, '\0',  sizeof (req.name));
 	else
-		stpncpy (req.name, after, sizeof (req.name));
+		strncpy (req.name, after, sizeof (req.name));
 
 	return msg_send (proc, &req, sizeof (req), ni, sizeof (*ni) * count);
 }
