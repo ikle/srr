@@ -1,13 +1,13 @@
 /*
  * Marten Process: Wire Format
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_WIRE_CORE_H
-#define PROC_WIRE_CORE_H  1
+#ifndef MARTEN_PROC_WIRE_CORE_H
+#define MARTEN_PROC_WIRE_CORE_H  1
 
 #include <stdint.h>
 
@@ -66,4 +66,4 @@ enum proc_code {
 	PROC_CLOCK_GETRES,
 };
 
-#endif  /* PROC_WIRE_CORE_H */
+#endif  /* MARTEN_PROC_WIRE_CORE_H */

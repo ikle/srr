@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/clock.h>
+#include <marten/proc/clock.h>
 
 int proc_clock_gettime (int proc, int clock, struct proc_time *time)
 {

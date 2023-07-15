@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/mls.h>
+#include <marten/proc/mls.h>
 
 int proc_mls_setlevel (int proc, int pid, int read, int write)
 {

@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_MCS_H
-#define PROC_MCS_H  1
+#ifndef MARTEN_PROC_MCS_H
+#define MARTEN_PROC_MCS_H  1
 
-#include <proc/wire/mcs.h>
+#include <marten/proc/wire/mcs.h>
 
 /*
  * The function proc_mcs_setcats sets the set of process MCS categories.
@@ -24,4 +24,4 @@
 int proc_mcs_setcats (int proc, int pid, int64_t active, int64_t family);
 int proc_mcs_getcats (int proc, int pid, struct proc_mcs_info *mi);
 
-#endif  /* PROC_MCS_H */
+#endif  /* MARTEN_PROC_MCS_H */

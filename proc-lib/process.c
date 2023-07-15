@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/process.h>
+#include <marten/proc/process.h>
 
 int proc_process_alloc (int proc, int flags)
 {

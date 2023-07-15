@@ -1,15 +1,15 @@
 /*
  * Marten Process Scheduler
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_SCHED_H
-#define PROC_SCHED_H  1
+#ifndef MARTEN_PROC_SCHED_H
+#define MARTEN_PROC_SCHED_H  1
 
-#include <proc/wire/sched.h>
+#include <marten/proc/wire/sched.h>
 
 /*
  * The function proc_sched_config changes the process scheduling algorithm
@@ -43,4 +43,4 @@ int proc_sched_start  (int proc, int pid);
 int proc_sched_stop   (int proc, int pid);
 int proc_sched_yield  (int target);
 
-#endif  /* PROC_SCHED_H */
+#endif  /* MARTEN_PROC_SCHED_H */

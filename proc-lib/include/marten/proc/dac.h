@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_DAC_H
-#define PROC_DAC_H  1
+#ifndef MARTEN_PROC_DAC_H
+#define MARTEN_PROC_DAC_H  1
 
-#include <proc/wire/dac.h>
+#include <marten/proc/wire/dac.h>
 
 /*
  * The function proc_dac_setids changes the user and/or group ID.
@@ -24,4 +24,4 @@ int proc_dac_setids  (int proc, int pid, int uid, int gid);
 int proc_dac_setmask (int proc, int pid, int active, int family);
 int proc_dac_query   (int proc, int pid, struct proc_dac_info *di);
 
-#endif  /* PROC_DAC_H */
+#endif  /* MARTEN_PROC_DAC_H */

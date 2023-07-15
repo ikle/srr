@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/caps.h>
+#include <marten/proc/caps.h>
 
 int proc_caps_setmask (int proc, int pid, int active, int family)
 {

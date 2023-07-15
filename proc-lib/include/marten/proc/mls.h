@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_MLS_H
-#define PROC_MLS_H  1
+#ifndef MARTEN_PROC_MLS_H
+#define MARTEN_PROC_MLS_H  1
 
-#include <proc/wire/mls.h>
+#include <marten/proc/wire/mls.h>
 
 /*
  * The function proc_mls_setlevel sets the MLS access level masks to
@@ -22,4 +22,4 @@
 int proc_mls_setlevel (int proc, int pid, int read, int write);
 int proc_mls_getlevel (int proc, int pid, struct proc_mls_info *mi);
 
-#endif  /* PROC_MLS_H */
+#endif  /* MARTEN_PROC_MLS_H */

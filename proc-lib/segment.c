@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/segment.h>
+#include <marten/proc/segment.h>
 
 long proc_segment_alloc (int proc, int pid, long addr, size_t len, int flags,
 			 int vid, int handle, uint64_t offset, size_t flen)

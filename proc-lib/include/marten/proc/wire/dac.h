@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_WIRE_DAC_H
-#define PROC_WIRE_DAC_H  1
+#ifndef MARTEN_PROC_WIRE_DAC_H
+#define MARTEN_PROC_WIRE_DAC_H  1
 
-#include <proc/wire/core.h>
+#include <marten/proc/wire/core.h>
 
 struct proc_dac_setids {
 	int32_t code, pid, uid, gid;
@@ -27,4 +27,4 @@ struct proc_dac_query {
 	int32_t code, pid;
 };
 
-#endif  /* PROC_WIRE_DAC_H */
+#endif  /* MARTEN_PROC_WIRE_DAC_H */

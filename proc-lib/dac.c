@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/dac.h>
+#include <marten/proc/dac.h>
 
 int proc_dac_setids (int proc, int pid, int uid, int gid)
 {

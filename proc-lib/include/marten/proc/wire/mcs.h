@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_WIRE_MCS_H
-#define PROC_WIRE_MCS_H  1
+#ifndef MARTEN_PROC_WIRE_MCS_H
+#define MARTEN_PROC_WIRE_MCS_H  1
 
-#include <proc/wire/core.h>
+#include <marten/proc/wire/core.h>
 
 /*
  * 1. Family set is a set of allowed categories. Can only be reduced.
@@ -36,4 +36,4 @@ struct proc_mcs_getcats {
 	int32_t code, pid;
 };
 
-#endif  /* PROC_WIRE_MCS_H */
+#endif  /* MARTEN_PROC_WIRE_MCS_H */

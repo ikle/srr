@@ -7,7 +7,7 @@
  */
 
 #include <srr/msg.h>
-#include <proc/mcs.h>
+#include <marten/proc/mcs.h>
 
 int proc_mcs_setcats (int proc, int pid, int64_t active, int64_t family)
 {

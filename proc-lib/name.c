@@ -9,7 +9,7 @@
 #include <string.h>
 
 #include <srr/msg.h>
-#include <proc/name.h>
+#include <marten/proc/name.h>
 
 int proc_name_attach (int proc, const char *name)
 {

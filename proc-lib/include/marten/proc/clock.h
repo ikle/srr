@@ -1,15 +1,15 @@
 /*
  * Marten Process Clocks
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_CLOCK_H
-#define PROC_CLOCK_H  1
+#ifndef MARTEN_PROC_CLOCK_H
+#define MARTEN_PROC_CLOCK_H  1
 
-#include <proc/wire/clock.h>
+#include <marten/proc/wire/clock.h>
 
 /*
  * The function proc_clock_gettime retrieve the time of the specified
@@ -34,4 +34,4 @@ long proc_clock_adjtime (int proc, int clock, long delta, int rate);
 int proc_clock_setres (int proc, int clock, int32_t nsec);
 int proc_clock_getres (int proc, int clock);
 
-#endif  /* PROC_CLOCK_H */
+#endif  /* MARTEN_PROC_CLOCK_H */

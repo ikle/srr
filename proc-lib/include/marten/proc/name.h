@@ -6,12 +6,12 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_NAME_H
-#define PROC_NAME_H  1
+#ifndef MARTEN_PROC_NAME_H
+#define MARTEN_PROC_NAME_H  1
 
 #include <stddef.h>
 
-#include <proc/wire/name.h>
+#include <marten/proc/wire/name.h>
 
 /*
  * The function proc_name_attach associates a name with the calling
@@ -34,4 +34,4 @@ int proc_name_lookup (int proc, const char *name);
 int proc_name_query  (int proc, const char *after,
 		      struct proc_name_info *ni, size_t count);
 
-#endif  /* PROC_NAME_H */
+#endif  /* MARTEN_PROC_NAME_H */

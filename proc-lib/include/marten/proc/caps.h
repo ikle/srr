@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_CAPS_H
-#define PROC_CAPS_H  1
+#ifndef MARTEN_PROC_CAPS_H
+#define MARTEN_PROC_CAPS_H  1
 
-#include <proc/wire/caps.h>
+#include <marten/proc/wire/caps.h>
 
 /*
  * The function proc_caps_config sets the active and inherited
@@ -21,4 +21,4 @@
 int proc_caps_setmask (int proc, int pid, int active, int family);
 int proc_caps_query   (int proc, int pid, struct proc_caps_info *ci);
 
-#endif  /* PROC_CAPS_H */
+#endif  /* MARTEN_PROC_CAPS_H */

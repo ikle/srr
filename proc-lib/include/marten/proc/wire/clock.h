@@ -1,15 +1,15 @@
 /*
  * Marten Process Clocks: Wire Format
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_WIRE_CLOCK_H
-#define PROC_WIRE_CLOCK_H  1
+#ifndef MARTEN_PROC_WIRE_CLOCK_H
+#define MARTEN_PROC_WIRE_CLOCK_H  1
 
-#include <proc/wire/core.h>
+#include <marten/proc/wire/core.h>
 
 struct proc_time {
 	int64_t sec;
@@ -39,4 +39,4 @@ struct proc_clock_getres {
 	int32_t code, clock;
 };
 
-#endif  /* PROC_WIRE_CLOCK_H */
+#endif  /* MARTEN_PROC_WIRE_CLOCK_H */

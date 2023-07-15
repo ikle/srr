@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_WIRE_CAPS_H
-#define PROC_WIRE_CAPS_H  1
+#ifndef MARTEN_PROC_WIRE_CAPS_H
+#define MARTEN_PROC_WIRE_CAPS_H  1
 
-#include <proc/wire/core.h>
+#include <marten/proc/wire/core.h>
 
 enum proc_caps {
 	CAP_PROC_SEGMENT	= 1 << 0x1,
@@ -38,4 +38,4 @@ struct proc_caps_query {
 	int32_t code, pid;
 };
 
-#endif  /* PROC_WIRE_CAPS_H */
+#endif  /* MARTEN_PROC_WIRE_CAPS_H */

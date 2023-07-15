@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_WIRE_MLS_H
-#define PROC_WIRE_MLS_H  1
+#ifndef MARTEN_PROC_WIRE_MLS_H
+#define MARTEN_PROC_WIRE_MLS_H  1
 
-#include <proc/wire/core.h>
+#include <marten/proc/wire/core.h>
 
 /*
  * new mls.read  = current mls.read  & requested mls.read
@@ -29,4 +29,4 @@ struct proc_mls_getlevel {
 	int32_t code, pid;
 };
 
-#endif  /* PROC_WIRE_MLS_H */
+#endif  /* MARTEN_PROC_WIRE_MLS_H */

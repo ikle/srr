@@ -1,17 +1,17 @@
 /*
  * Marten Process Segments
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef PROC_SEGMENT_H
-#define PROC_SEGMENT_H  1
+#ifndef MARTEN_PROC_SEGMENT_H
+#define MARTEN_PROC_SEGMENT_H  1
 
 #include <stddef.h>
 
-#include <proc/wire/segment.h>
+#include <marten/proc/wire/segment.h>
 
 /*
  * The proc_segment_alloc function allocates a memory segment of the
@@ -52,4 +52,4 @@ int proc_segment_share (int proc, int pid, long addr, size_t len,
 long proc_segment_take (int proc, int pid, long addr, size_t len,
 			int from, int flags);
 
-#endif  /* PROC_SEGMENT_H */
+#endif  /* MARTEN_PROC_SEGMENT_H */
