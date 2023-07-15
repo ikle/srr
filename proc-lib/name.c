@@ -1,7 +1,7 @@
 /*
- * SRR Process Names
+ * Marten Process Names
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
@@ -9,7 +9,7 @@
 #include <string.h>
 
 #include <srr/msg.h>
-#include <srr/proc-name.h>
+#include <proc/name.h>
 
 int proc_name_attach (int proc, const char *name)
 {

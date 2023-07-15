@@ -1,15 +1,15 @@
 /*
- * SRR Process Names: Wire Format
+ * Marten Process Names: Wire Format
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_WIRE_PROC_NAME_H
-#define SRR_WIRE_PROC_NAME_H  1
+#ifndef PROC_WIRE_NAME_H
+#define PROC_WIRE_NAME_H  1
 
-#include <srr/wire/proc.h>
+#include <proc/wire/core.h>
 
 struct proc_name_attach {
 	int32_t code;
@@ -36,4 +36,4 @@ struct proc_name_info {
 	char name[20];
 };
 
-#endif  /* SRR_WIRE_PROC_NAME_H */
+#endif  /* PROC_WIRE_NAME_H */

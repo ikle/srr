@@ -1,17 +1,17 @@
 /*
- * SRR Process Names
+ * Marten Process Names
  *
- * Copyright (c) 2022 Alexei A. Smekalkine <ikle@ikle.ru>
+ * Copyright (c) 2022-2023 Alexei A. Smekalkine <ikle@ikle.ru>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
 
-#ifndef SRR_PROC_NAME_H
-#define SRR_PROC_NAME_H  1
+#ifndef PROC_NAME_H
+#define PROC_NAME_H  1
 
 #include <stddef.h>
 
-#include <srr/wire/proc-name.h>
+#include <proc/wire/name.h>
 
 /*
  * The function proc_name_attach associates a name with the calling
@@ -34,4 +34,4 @@ int proc_name_lookup (int proc, const char *name);
 int proc_name_query  (int proc, const char *after,
 		      struct proc_name_info *ni, size_t count);
 
-#endif  /* SRR_PROC_NAME_H */
+#endif  /* PROC_NAME_H */
