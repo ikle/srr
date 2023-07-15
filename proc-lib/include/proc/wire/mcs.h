@@ -20,6 +20,8 @@
 /*
  * next mcs.family = current mcs.family & requested mcs.family
  * next mcs.active = requested mcs.active & next mcs.family
+ *
+ * Returns -EPERM if next mcs.family is zero.
  */
 struct proc_mcs_setcats {
 	int32_t code, pid;

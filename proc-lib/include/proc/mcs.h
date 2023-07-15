@@ -13,10 +13,10 @@
 
 /*
  * The function proc_mcs_setcats sets the set of process MCS categories.
- * The function always succeeds, setting the family category set to the
- * intersection of the current family set and the requested one. The active
- * category set is replaced by the intersection of the new family set and
- * requested active set.
+ * The function sets the family category set to the intersection of the
+ * current family set and the requested one. The active category set
+ * replaced by the intersection of the new family set and the requested
+ * active set. Returns -EPERM if new family set is zero, 0 otherwise.
  *
  * The function proc_mcs_getcats queries the current set of process MCS
  * categories.
