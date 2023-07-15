@@ -26,7 +26,7 @@
  * The function proc_name_query queries the name info. Stores information
  * about up to count names after the specified one and returns the number
  * of entries saved. To search from the beginning of the list of names,
- * specify after = NULL.
+ * specify empty string (after = "").
  */
 int proc_name_attach (int proc, const char *name);
 int proc_name_detach (int proc, const char *name);

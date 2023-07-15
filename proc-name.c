@@ -47,11 +47,7 @@ int proc_name_query (int proc, const char *after,
 	struct proc_name_query req;
 
 	req.code = PROC_NAME_QUERY;
-
-	if (after == NULL)
-		memset  (req.name, '\0',  sizeof (req.name));
-	else
-		strncpy (req.name, after, sizeof (req.name));
+	strncpy (req.name, after, sizeof (req.name));
 
 	return msg_send (proc, &req, sizeof (req), ni, sizeof (*ni) * count);
 }
